@@ -13,7 +13,6 @@ def about(request):
 
 def contact(request):
     return render(request, "home/contact.html")
-Run the app#
 
 def hello_there(request, name):
     return render(
