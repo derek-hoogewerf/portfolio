@@ -4,6 +4,8 @@ from django.shortcuts import render
 import re
 from django.utils.timezone import datetime
 from django.http import HttpResponse
+import os
+from web_project.settings import STATIC_ROOT
 
 def home(request):
     return render(request, "home/home.html")
