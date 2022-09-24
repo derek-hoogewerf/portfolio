@@ -1,11 +1,10 @@
-from django.shortcuts import render
-
 # Create your views here.
 import re
+import os
 from django.utils.timezone import datetime
 from django.http import HttpResponse
-import os
-from django.shortcuts import redirect
+from django.views.generic import ListView
+from django.shortcuts import redirect, render
 from home.forms import LogMessageForm
 from home.models import LogMessage
 from web_project.settings import STATIC_ROOT
