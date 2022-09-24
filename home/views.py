@@ -9,8 +9,13 @@ from home.forms import LogMessageForm
 from home.models import LogMessage
 from web_project.settings import STATIC_ROOT
 
-def home(request):
-    return render(request, "home/home.html")
+class HomeListView(ListView):
+    """Renders the home page, with a list of all messages."""
+    model = LogMessage
+
+    def get_context_data(self, **kwargs):
+        context = super(HomeListView, self).get_context_data(**kwargs)
+        return context
 
 def about(request):
     return render(request, "home/about.html")
